@@ -1,7 +1,7 @@
 /* ======================== IMPORTS & SETTINGS ========================= */
 const express = require("express");
 const app = express();
-const PORT = proccess.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
 /* ======================= ROUTING & MIDDLEWARE ======================== */
 // Routing _________________________
