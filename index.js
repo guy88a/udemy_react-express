@@ -7,8 +7,8 @@ const keys = require("./config/keys");
 require('./services/passport');
 
 // * Configurations * //
-const app = express();
 mongoose.connect(keys.mongoURI);
+const app = express();
 const PORT = process.env.PORT || 5000;
 
 /* =============================== ROUTING & MIDDLEWARE ================================ */
