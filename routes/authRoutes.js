@@ -4,9 +4,11 @@
  * Routing configurations
  */
 
-/* ====================================== ROUTING ====================================== */
+/* ====================================== IMPORTS ====================================== */
 
 const passport = require('passport');
+
+/* ====================================== ROUTING ====================================== */
 
 module.exports = app => {
     app.get('/auth/google', passport.authenticate('google', {

@@ -7,11 +7,13 @@
  * -googleId: String
  */
 
-/* ====================================== SCHEMA ======================================= */
+/* ====================================== IMPORTS ====================================== */
 
 const mongoose = require('mongoose');
 const {Schema} = mongoose;
 
-const UserSchema = ({googleId: String});
+/* ====================================== SCHEMA ======================================= */
 
-mongoose.model('users', UserSchema);
+const userSchema = new Schema({googleId: String});
+
+mongoose.model('users', userSchema);

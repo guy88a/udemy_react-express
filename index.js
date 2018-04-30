@@ -1,11 +1,13 @@
-/* ================================== CONFIGURATIONS =================================== */
+/* ====================================== IMPORTS ====================================== */
 
 // * Imports * //
 const express = require('express');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
-require('./services/passport');
 require('./models/User');
+require('./services/passport');
+
+/* ================================== CONFIGURATIONS =================================== */
 
 // * Configurations * //
 mongoose.connect(keys.mongoURI);
@@ -16,8 +18,6 @@ const PORT = process.env.PORT || 5000;
 
 // * Routing * //
 require('./routes/authRoutes')(app);
-
-// * Middleware * //
 
 /* ======================================= MAIN ======================================== */
 
