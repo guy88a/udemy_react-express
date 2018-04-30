@@ -1,10 +1,11 @@
 /* ================================== CONFIGURATIONS =================================== */
 
 // * Imports * //
-const express = require("express");
-const mongoose = require("mongoose");
-const keys = require("./config/keys");
+const express = require('express');
+const mongoose = require('mongoose');
+const keys = require('./config/keys');
 require('./services/passport');
+require('./models/User');
 
 // * Configurations * //
 mongoose.connect(keys.mongoURI);
