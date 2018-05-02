@@ -55,8 +55,8 @@ passport.use(new GoogleStrategy({
 
 /* ==================================== FUNCTIONS ====================================== */
 
-function handleSignin(user, done) {
-    if (user) {
+function handleGoogleSignin(existingUser, done) {
+    if (existingUser) {
         //user already exists:
         done(null, existingUser);
         console.log("user already exists");
