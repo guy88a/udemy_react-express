@@ -55,18 +55,18 @@ passport.use(new GoogleStrategy({
 
 /* ==================================== FUNCTIONS ====================================== */
 
-function handleGoogleSignin(existingUser, done) {
+function handleGoogleSignin(id, existingUser, done) {
     if (existingUser) {
         //user already exists:
         done(null, existingUser);
         console.log("user already exists");
     } else {
         //create a new user:
-        new User({googleId: profile.id})
+        new User({googleId: id})
             .save()
             .then((user) => {
                 done(null, user);
                 console.log("new user created");
             });
     }
-}
+};
